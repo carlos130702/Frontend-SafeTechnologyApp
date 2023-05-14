@@ -1,0 +1,51 @@
+<h1 mat-dialog-title>Hola</h1>
+<div mat-dialog-content>
+  <p>Quieres agregar un nuevo reporte?</p>
+</div>
+<form fxLayoutAlign="stretch" fxLayout="column" [formGroup]="reportFormGroup">
+  <div class="form-floating mb-3">
+    <input class="form-control" autocomplete="off" formControlName="observation" >
+    <label >Observacion</label>
+    <span *ngIf="reportFormGroup.get('observation')?.hasError('required')"class="form-text text-danger">
+      Observacion es <strong>requerido</strong>
+    </span>
+  </div>
+
+  <div class="form-floating mb-3">
+    <input class="form-control" autocomplete="off" formControlName="diagnosis" >
+    <label >Diagnostico</label>
+    <span *ngIf="reportFormGroup.get('diagnosis')?.hasError('required')"class="form-text text-danger">
+      Diagnostico es <strong>requerido</strong>
+    </span>
+  </div>
+
+  <div class="form-floating mb-3">
+    <input class="form-control" autocomplete="off" formControlName="repairDescription" >
+    <label >Descripcion de Reparacion</label>
+    <span *ngIf="reportFormGroup.get('repairDescription')?.hasError('required')"class="form-text text-danger">
+      Descripcion de Reparacion es <strong>requerido</strong>
+    </span>
+  </div>
+
+  <div class="form-floating mb-3">
+    <input class="form-control" type="date" autocomplete="off" formControlName="date" >
+    <label >Fecha de Reporte</label>
+    <span *ngIf="reportFormGroup.get('date')?.hasError('required')"class="form-text text-danger">
+      Fecha de Reporte es <strong>requerido</strong>
+    </span>
+  </div>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Selecciona una cita pendiente</mat-label>
+    <mat-select [(value)]="data.selected">
+      <mat-option [value]="appointment.id" *ngFor="let appointment of data.appointment;">{{appointment.applianceModel.name}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+
+</form>
+
+<div class="btn-group ml-8 mb-5">
+  <button class="btn btn-danger" type="button" (click)="onNoClick()">No Gracias</button>
+  <button  class="btn btn-secondary ml-3" (click)="onClick()" [mat-dialog-close]="reportFormGroup" [disabled]="reportFormGroup.invalid ">OK</button>
+</div>

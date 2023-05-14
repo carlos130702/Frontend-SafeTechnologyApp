@@ -1,0 +1,114 @@
+<app-home-navbar></app-home-navbar>
+<div class="grid p-3">
+  <div class="col-12 mt-5 md:col-6 md:col-offset-3 md:mt-8">
+    <div class="flex flex-column">
+    <div class="card-title">
+      <h3 class="fs-4 text-center">Registro-Cliente</h3>
+    </div>
+    <form fxLayoutAlign="stretch" fxLayout="column" [formGroup]="registerClientFormGroup">
+      <div class="form-floating mb-3">
+        <input class="form-control" placeholder="name@example.com" autocomplete="off" formControlName="username" >
+        <label >Username</label>
+        <span *ngIf="registerClientFormGroup.get('username')?.hasError('required')"class="form-text text-danger">
+          Username es <strong>requerido</strong>
+        </span>
+        <span *ngIf="registerClientFormGroup.get('username')?.hasError('minlength')"class="form-text text-danger">
+          Username debe tener al menos <strong>3</strong> caracteres
+        </span>
+        <span *ngIf="registerClientFormGroup.get('username')?.hasError('maxlength') &&
+                            !registerClientFormGroup.get('username')?.hasError('required')"class="form-text text-danger">
+          Username debe tener menos de <strong>16</strong> caracteres
+        </span>
+      </div>
+
+      <div class="form-floating mb-3">
+        <input class="form-control" placeholder="name@example.com" autocomplete="off" formControlName="names" >
+        <label >Nombre</label>
+        <span *ngIf="registerClientFormGroup.get('names')?.hasError('required')"class="form-text text-danger">
+          Nombre es <strong>requerido</strong>
+        </span>
+        <span *ngIf="registerClientFormGroup.get('names')?.hasError('minlength')"class="form-text text-danger">
+          Nombre debe tener al menos <strong>2</strong> caracteres
+        </span>
+        <span *ngIf="registerClientFormGroup.get('names')?.hasError('maxlength') &&
+                            !registerClientFormGroup.get('names')?.hasError('required')"class="form-text text-danger">
+          Nombre debe tener menos de <strong>16</strong> caracteres
+        </span>
+      </div>
+
+      <div class="form-floating mb-3">
+        <input class="form-control" placeholder="name@example.com" autocomplete="off" formControlName="lastNames" >
+        <label >Apellido</label>
+        <span *ngIf="registerClientFormGroup.get('lastNames')?.hasError('required')"class="form-text text-danger">
+          Apellido es <strong>requerido</strong>
+        </span>
+        <span *ngIf="registerClientFormGroup.get('lastNames')?.hasError('minlength')"class="form-text text-danger">
+          Apellido debe tener al menos <strong>6</strong> caracteres
+        </span>
+        <span *ngIf="registerClientFormGroup.get('lastNames')?.hasError('maxlength') &&
+                            !registerClientFormGroup.get('lastNames')?.hasError('required')"class="form-text text-danger">
+          Apellido debe tener menos de <strong>16</strong> caracteres
+        </span>
+      </div>
+
+      <div class="form-floating mb-3">
+        <input class="form-control" placeholder="name@example.com" autocomplete="off" formControlName="address" >
+        <label >Direccion</label>
+        <span *ngIf="registerClientFormGroup.get('address')?.hasError('required')"class="form-text text-danger">
+          Direccion es <strong>requerido</strong>
+        </span>
+        <span *ngIf="registerClientFormGroup.get('address')?.hasError('minlength')"class="form-text text-danger">
+          Direccion debe tener al menos <strong>6</strong> characters
+        </span>
+      </div>
+
+      <div class="form-floating mb-3">
+        <input class="form-control" placeholder="name@example.com" autocomplete="off" formControlName="urlToProfile" >
+        <label >Url de foto de Perfil</label>
+        <span *ngIf="registerClientFormGroup.get('urlToProfile')?.hasError('required')"class="form-text text-danger">
+          Url es <strong>requerido</strong>
+        </span>
+        <span *ngIf="registerClientFormGroup.get('urlToProfile')?.hasError('minlength')"class="form-text text-danger">
+          Url debe tener al menos <strong>6</strong> caracteres
+        </span>
+      </div>
+
+
+      <div class="form-floating mb-3">
+        <input class="form-control" placeholder="name@example.com" autocomplete="off" formControlName="cellPhoneNumber" >
+        <label >Celular</label>
+        <span *ngIf="registerClientFormGroup.get('cellPhoneNumber')?.hasError('required')"class="form-text text-danger">
+          Celular es <strong>requerido</strong>
+        </span>
+        <span *ngIf="registerClientFormGroup.get('cellPhoneNumber')?.hasError('pattern')"class="form-text text-danger">
+          Celular debe ser un <strong>numero</strong> valido
+        </span>
+      </div>
+
+      <div class="form-floating mb-3">
+        <input class="form-control" placeholder="name@example.com" autocomplete="off" formControlName="email" >
+        <label >Email</label>
+        <span *ngIf="registerClientFormGroup.get('email')?.hasError('required')"class="form-text text-danger">
+          Email es <strong>requerido</strong>
+        </span>
+        <span *ngIf="registerClientFormGroup.get('email')?.hasError('email')"class="form-text text-danger">
+          Invalid email
+        </span>
+      </div>
+
+      <div class="form-floating mb-3">
+        <input class="form-control" placeholder="name@example.com" autocomplete="off" formControlName="password" >
+        <label >Contraseña</label>
+        <span *ngIf="registerClientFormGroup.get('password')?.hasError('required')"class="form-text text-danger">
+          Contraseña es <strong>requerido</strong>
+        </span>
+        <span *ngIf="registerClientFormGroup.get('password')?.hasError('minlength')"class="form-text text-danger">
+          Contraseña debe tener al menos <strong>6</strong> caracteres
+        </span>
+      </div>
+
+      <button class="btn btn-primary" type="button" (click)="SubmitRegisterClient()">Registrarse</button>
+    </form>
+  </div>
+</div>
+</div>

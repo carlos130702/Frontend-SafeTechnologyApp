@@ -1,0 +1,29 @@
+<div class="justify-content-center align-items-center row">
+  <app-technician-navbar></app-technician-navbar>
+  <div class="grid p-3 justify-content-center ">
+
+    <div class="flex flex-column ">
+  <div class="accordion xl:col-10 lg:col-10 md:col-10 sm:col-9  mt-5 md:mt-4 h-auto" id="accordionExample" style="margin-top: 60px;margin-left: 90px">
+    <div class="accordion-item" *ngFor="let report of reportsData; index as i">
+      <h2 class="accordion-header">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          <strong>Reporte {{i+1}}</strong>
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <h4> <td><strong>Observacion:</strong></td> {{report.observation | titlecase}}</h4>
+          <h4> <td><strong>Diagnostico:</strong></td> {{report.diagnosis | titlecase}}</h4>
+          <h4> <td><strong>Descripcion de Reparacion:</strong></td> {{report.repairDescription | titlecase}}</h4>
+          <h4> <td><strong>Fecha:</strong></td> {{report.date}}</h4>
+          <h4> <td><strong>Estado:</strong></td> {{report.appointment.status ? 'Pendiente' : 'Finalizado'}}</h4>
+          <button type="button" class="btn btn-outline-secondary" (click)="openDialogUpdate(report)">Edit Item</button></div>
+      </div>
+    </div>
+  </div>
+    </div>
+    <button class="btn btn-danger h-25" (click)="openDialogAdd()">Nuevo Reporte</button>
+
+  </div>
+
+</div>

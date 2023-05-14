@@ -1,0 +1,30 @@
+<div class="justify-content-center align-items-center row">
+  <app-client-navbar></app-client-navbar>
+  <div class="container p-2 line-height-2 mt-6">
+    <div class="grid bm-8 pt-2 justify-content-center ">
+        <div class="card align-content-center xl:col-3 lg:col-4 md:col-6 sm:col-8 sm:mb-5 h-auto ml-6 sm:ml-6" *ngFor="let technician of technicians; index as i">
+    <h2 class="text-dark fs-4">{{technician.names| titlecase}}</h2>
+    <img class="img-thumbnail rounded mx-auto d-block border border-dark" [src]="technician.urlToProfile"  alt="Profile">
+    <br>
+    <div class="card-body">
+      <h5 class="card-title fs-6 text-start">
+        <strong>Nombre:</strong></h5>
+      <p class="card-text text-center">{{technician.names | titlecase}}
+        <br>
+      <h5 class="card-title fs-6 text-start">
+        <strong>Apellido:</strong></h5>
+      <p class="card-text text-center">{{technician.lastNames | titlecase}}
+        <br>
+      <h5 class="card-title fs-6 text-start">
+        <strong>Direccion:</strong></h5>
+      <p class="card-text text-center">{{technician.address | titlecase}}
+        <br>
+      <h5 class="card-title fs-6 text-start ">
+        <strong>Celular:</strong></h5>
+      <p class="card-text text-center">{{technician.cellPhoneNumber}}
+        <br>
+    </div>
+  </div>
+</div>
+    </div>
+  </div>

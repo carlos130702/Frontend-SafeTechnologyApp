@@ -1,0 +1,32 @@
+<app-home-navbar></app-home-navbar>
+<div class="grid p-3">
+  <div class="col-12 mt-6 md:col-6 md:col-offset-3 md:mt-8">
+  <div class="flex flex-column">
+    <div class="card-title">
+      <h3 class="fs-4 text-center">Login</h3>
+    </div>
+    <form fxLayoutAlign="stretch" fxLayout="column" [formGroup]="userFormGroup">
+      <div class="form-floating mb-3">
+        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" autocomplete="off" formControlName="username" >
+        <label for="floatingInput">Username</label>
+        <span *ngIf="userFormGroup.get('username')?.hasError('required')"class="form-text text-danger">
+            Username is <strong>required</strong>
+        </span>
+      </div>
+      <div class="form-floating">
+        <input type="password" class="form-control" id="floatingPassword" placeholder="Password" autocomplete="off" formControlName="password">
+        <label for="floatingPassword">Password</label>
+        <span *ngIf="userFormGroup.get('password')?.hasError('required')"class="form-text text-danger">
+            Password is <strong>required</strong>
+        </span>
+        <span  *ngIf="userFormGroup.get('password')?.hasError('minlength')" class="form-text text-danger">
+          Password must have at least <strong>6</strong> characters
+        </span>
+      </div>
+      <button type="button" class="btn btn-primary" (click)="SubmitLogin()" style="margin-top: 1rem">Login</button>
+    </form>
+    <br><br>
+    <a class="text-danger" style="margin-top: 10px;" routerLink="/register">Nuevo Usuario?Click aqui</a>
+  </div>
+</div>
+</div>

@@ -1,0 +1,51 @@
+<h1 mat-dialog-title xmlns="http://www.w3.org/1999/html">Hi</h1>
+<div mat-dialog-content>
+  <p>Would you like to add an item?</p>
+</div>
+<form fxLayoutAlign="stretch" fxLayout="column" [formGroup]="appointmentFormGroup">
+
+  <div class="form-floating mb-3">
+    <input class="form-control" type="date" autocomplete="off" formControlName="dateReserve" >
+    <label >Fecha de Reserva</label>
+    <span *ngIf="appointmentFormGroup.get('dateReserve')?.hasError('required')"class="form-text text-danger">
+      Fecha de Reserva es <strong>requerido</strong>
+    </span>
+  </div>
+
+  <div class="form-floating mb-3">
+    <input class="form-control" type="date" autocomplete="off" formControlName="dateAttention" >
+    <label >Fecha de Atencion</label>
+    <span *ngIf="appointmentFormGroup.get('dateAttention')?.hasError('required')"class="form-text text-danger">
+      Fecha de Atencion es <strong>requerido</strong>
+    </span>
+  </div>
+
+  <div class="form-floating mb-3">
+    <input class="form-control" autocomplete="off" formControlName="hour" >
+    <label >Hora</label>
+    <span *ngIf="appointmentFormGroup.get('hour')?.hasError('required')"class="form-text text-danger">
+      Hora es <strong>requerido</strong>
+    </span>
+  </div>
+
+  <label >Electrodomestico</label>
+  <mat-form-field appearance="fill">
+    <mat-label>Selecciona un electrodomestico</mat-label>
+    <mat-select [(value)]="data.selected">
+      <mat-option [value]="applianceModel.id" *ngFor="let applianceModel of data.applianceModel;">{{applianceModel.name}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <label >Tecnico</label>
+  <mat-form-field appearance="fill">
+    <mat-label>Selecciona un tecnico</mat-label>
+    <mat-select [(value)]="technicianSelected">
+      <mat-option [value]="applianceModel.id" *ngFor="let applianceModel of technicians">{{applianceModel.names}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+</form>
+
+<div class="btn-group ml-8 mb-5">
+  <button class="btn btn-danger" type="button"(click)="onNoClick()">No Thanks</button>
+  <button class="btn btn-secondary ml-3"(click)="onClick()" [mat-dialog-close]="data" type="submit" [disabled]="appointmentFormGroup.invalid">OK</button>
+</div>

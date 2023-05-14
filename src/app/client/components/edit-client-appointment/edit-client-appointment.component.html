@@ -1,0 +1,33 @@
+<h1 mat-dialog-title>Hola</h1>
+<div mat-dialog-content>
+  <p>Quieres editar una cita?</p>
+</div>
+
+<form fxLayoutAlign="stretch" fxLayout="column" [formGroup]="editClientAppointmentFormGroup">
+
+  <div class="form-floating mb-3">
+    <input class="form-control" type="date" autocomplete="off" formControlName="dateAttention" >
+    <label >Fecha de Atencion</label>
+    <span *ngIf="editClientAppointmentFormGroup.get('dateAttention')?.hasError('required')"class="form-text text-danger">
+      Fecha de Atencion es <strong>requerido</strong>
+    </span>
+  </div>
+
+  <div class="form-floating mb-3">
+    <input class="form-control" autocomplete="off" formControlName="hour" >
+    <label >Hora</label>
+    <span *ngIf="editClientAppointmentFormGroup.get('hour')?.hasError('required')"class="form-text text-danger">
+      Hora es <strong>requerido</strong>
+    </span>
+  </div>
+
+
+</form>
+
+
+<div class="btn-group ml-8 mb-5">
+  <button class="btn btn-danger" type="button" (click)="onNoClick()">No Gracias</button>
+  <button *ngIf="editClientAppointmentFormGroup" class="btn btn-secondary ml-3" [mat-dialog-close]="editClientAppointmentFormGroup"
+          [disabled]="editClientAppointmentFormGroup.invalid" >Ok</button>
+</div>
+

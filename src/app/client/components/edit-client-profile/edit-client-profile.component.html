@@ -1,0 +1,85 @@
+<h1 mat-dialog-title>Hola</h1>
+<div mat-dialog-content>
+  <p>Quieres guardar tus cambios?</p>
+</div>
+<form fxLayoutAlign="stretch" fxLayout="column" [formGroup]="editClientProfileFormGroup">
+  <div class="form-floating mb-3">
+    <input class="form-control" placeholder="name@example.com" autocomplete="off" formControlName="names" >
+    <label >Nombre</label>
+    <span *ngIf="editClientProfileFormGroup.get('names')?.hasError('required')"class="form-text text-danger">
+          Nombre es <strong>requerido</strong>
+        </span>
+    <span *ngIf="editClientProfileFormGroup.get('names')?.hasError('minlength')"class="form-text text-danger">
+          Nombre debe tener al menos <strong>2</strong> caracteres
+        </span>
+    <span *ngIf="editClientProfileFormGroup.get('names')?.hasError('maxlength') &&
+                            !editClientProfileFormGroup.get('names')?.hasError('required')"class="form-text text-danger">
+          Nombre debe tener menos de <strong>16</strong> caracteres
+        </span>
+  </div>
+
+  <div class="form-floating mb-3">
+    <input class="form-control" placeholder="name@example.com" autocomplete="off" formControlName="lastNames" >
+    <label >Apellido</label>
+    <span *ngIf="editClientProfileFormGroup.get('lastNames')?.hasError('required')"class="form-text text-danger">
+          Apellido es <strong>requerido</strong>
+        </span>
+    <span *ngIf="editClientProfileFormGroup.get('lastNames')?.hasError('minlength')"class="form-text text-danger">
+          Apellido debe tener al menos <strong>6</strong> caracteres
+        </span>
+    <span *ngIf="editClientProfileFormGroup.get('lastNames')?.hasError('maxlength') &&
+                            !editClientProfileFormGroup.get('lastNames')?.hasError('required')"class="form-text text-danger">
+          Apellido debe tener menos de <strong>16</strong> caracteres
+        </span>
+  </div>
+
+  <div class="form-floating mb-3">
+    <input class="form-control" placeholder="name@example.com" autocomplete="off" formControlName="address" >
+    <label >Direccion</label>
+    <span *ngIf="editClientProfileFormGroup.get('address')?.hasError('required')"class="form-text text-danger">
+          Direccion es <strong>requerido</strong>
+        </span>
+    <span *ngIf="editClientProfileFormGroup.get('address')?.hasError('minlength')"class="form-text text-danger">
+          Direccion debe tener al menos <strong>6</strong> characters
+        </span>
+  </div>
+
+  <div class="form-floating mb-3">
+    <input class="form-control" type="number" placeholder="name@example.com" autocomplete="off" formControlName="cellPhoneNumber" >
+    <label >Celular</label>
+    <span *ngIf="editClientProfileFormGroup.get('cellPhoneNumber')?.hasError('required')"class="form-text text-danger">
+          Celular es <strong>requerido</strong>
+        </span>
+    <span *ngIf="editClientProfileFormGroup.get('cellPhoneNumber')?.hasError('pattern')"class="form-text text-danger">
+          Celular debe ser un <strong>numero</strong> valido
+        </span>
+  </div>
+
+  <div class="form-floating mb-3">
+    <input class="form-control" type="email" placeholder="name@example.com" autocomplete="off" formControlName="email" >
+    <label >Email</label>
+    <span *ngIf="editClientProfileFormGroup.get('email')?.hasError('required')"class="form-text text-danger">
+          Email es <strong>requerido</strong>
+        </span>
+    <span *ngIf="editClientProfileFormGroup.get('email')?.hasError('email')"class="form-text text-danger">
+          Invalid email
+        </span>
+  </div>
+
+  <div class="form-floating mb-3">
+    <input class="form-control" placeholder="name@example.com" autocomplete="off" formControlName="password" >
+    <label >Contraseña</label>
+    <span *ngIf="editClientProfileFormGroup.get('password')?.hasError('required')"class="form-text text-danger">
+          Contraseña es <strong>requerido</strong>
+        </span>
+    <span *ngIf="editClientProfileFormGroup.get('password')?.hasError('minlength')"class="form-text text-danger">
+          Contraseña debe tener al menos <strong>6</strong> caracteres
+        </span>
+  </div>
+</form>
+
+<div class="btn-group ml-8 mb-5">
+  <button  class="btn btn-danger" type="button"  (click)="onNoClick()">No Gracias</button>
+  <button *ngIf="editClientProfileFormGroup" class="btn btn-secondary ml-3" type="button" [mat-dialog-close]="editClientProfileFormGroup"
+          [disabled]="editClientProfileFormGroup.invalid" >Ok</button>
+</div>

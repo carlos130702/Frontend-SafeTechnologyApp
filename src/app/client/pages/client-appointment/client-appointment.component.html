@@ -1,0 +1,49 @@
+<div class="justify-content-center align-items-center row">
+ <app-client-navbar></app-client-navbar>
+  <div class="align-content-center w-75 h-75 d-inline-block mx-auto p-2">
+    <button type="button" class="btn btn-danger" style="margin-left: 80%;margin-top: 20px" (click)="openDialogAdd()">Registrar cita</button>
+      <section class = "flex-container">
+        <div class="container p-2 line-height-2 mt-6">
+          <div class="grid bm-8 pt-2 justify-content-center ">
+        <div class="card align-content-center xl:col-3 lg:col-4 md:col-6 sm:col-8 sm:mb-5 h-auto ml-6"  *ngFor="let appointment of appointmentData; index as i">
+          <img class="card-img-top img-fluid img-thumbnail rounded mx-auto d-block border-secondary" [src]="appointment.applianceModel.urlToImage"  alt="Refrigerator">
+          <div class="card-body">
+            <h5 class="card-title fs-6 text-start">
+              <strong>Nombre:</strong></h5>
+            <p class="card-text">{{appointment.applianceModel.name}}
+              <br>
+            <h5 class="card-title fs-6 text-start">
+              <strong>Modelo:</strong></h5>
+            <p class="card-text">{{appointment.applianceModel.model}}
+              <br>
+            <h5 class="card-title fs-6 text-start">
+              <strong>Fecha de reserva:</strong></h5>
+            <p class="card-text">{{appointment.dateReserve}}
+              <br>
+            <h5 class="card-title fs-6 text-start">
+              <strong>Fecha de atencion:</strong></h5>
+            <p class="card-text">{{appointment.dateAttention}}
+              <br>
+            <h5 class="card-title fs-6 text-start">
+              <strong>Hora:</strong></h5>
+            <p class="card-text">{{appointment.hour}}
+              <br>
+            <h5 class="card-title fs-6 text-start">
+              <strong>Tecnico:</strong></h5>
+            <p class="card-text">{{appointment?.technician.names}} {{appointment?.technician.lastNames}}
+              <br>
+            <h5 class="card-title fs-6 text-start">
+              <strong>Estado:</strong></h5>
+            <p class="card-text">{{appointment.status ? 'Pendiente': 'Finalizado'}}
+          </div>
+          <div >
+          <button type="button"  class="btn btn-outline-secondary  mr-6"  (click)="openDialogUpdate(appointment)">Editar Cita</button>
+          <button type="button"  class="btn btn-outline-danger "  (click)="deleteAppointmentData(appointment)">Eliminar Cita</button>
+          </div>
+        </div>
+          </div>
+        </div>
+      </section>
+  </div>
+</div>
+

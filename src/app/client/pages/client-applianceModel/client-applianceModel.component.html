@@ -1,0 +1,36 @@
+<div class="justify-content-center align-items-center row">
+ <app-client-navbar></app-client-navbar>
+  <div class="align-content-center w-75 h-75 d-inline-block mx-auto p-2">
+    <div class="justify-content-end">
+      <button type="button" class="btn btn-danger ml-8 mb-5" (click)="openDialogAdd()">Nuevo Electrodomestico</button>
+    </div>
+  <input
+    type="text" class="form-control"
+    placeholder="Buscar electrodomestico"
+    [(ngModel)]="searchTag"
+    #txtTagInput>
+
+   <section class = "flex-container ">
+     <div class="container p-2 line-height-2 mt-6">
+       <div class="grid bm-8 pt-2 justify-content-center ">
+      <div class="card align-content-center xl:col-3 lg:col-4 md:col-6 sm:col-8 sm:mb-5 h-auto ml-6" *ngFor="let applianceModel of appliancesModelData| filter:searchTag:'name';">
+        <img class="card-img-top img-fluid img-thumbnail rounded mx-auto d-block border-secondary w-13rem h-16rem mt-4" [src]="applianceModel.urlToImage"  alt="Refrigerator">
+        <div class="card-body">
+          <h5 class="card-title fs-6 text-start">
+              <strong>Nombre:</strong></h5>
+            <p class="card-text">{{applianceModel.name}}
+              <br>
+          <h5 class="card-title fs-6 text-start">
+              <strong>Modelo:</strong></h5>
+            <p class="card-text">{{applianceModel.model}}
+        </div>
+        <div>
+          <button type="button" class="btn btn-outline-secondary mr-6"  (click)="openDialogUpdate(applianceModel)">Editar</button>
+          <button type="button" class="btn btn-outline-danger "  (click)="deleteApplianceData(applianceModel)">Eliminar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+   </section>
+  </div>
+</div>

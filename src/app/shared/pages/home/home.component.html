@@ -1,0 +1,205 @@
+<app-home-navbar></app-home-navbar>
+<body>
+<section id="hero" class="min-vh-100 d-flex text-center align-items-center">
+  <div class="containerhero" style="margin-top: 15rem;">
+      <div class="col-12">
+        <h1  class="text-uppercase text-dark fw-semibold fs-1 ">Bienvenido a Safe Technology</h1>
+        <h5 class="text-dark mb-4 fs-5" >NUNCA FUE TAN FACIL CONTACTAR A TECNICOS EXPERTOS DE REPARACION DE EQUIPOS DE LINEA BLANCA</h5>
+        <div >
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <a class="btn btn-primary me-2 mt-8" href="#purpose">SABER MÁS</a>
+          <a class="btn btn-light ms-2 mt-8" [routerLink]="'/login'">EMPEZAR A NAVEGAR</a>
+        </div>
+      </div>
+  </div>
+</section>
+
+<section id="purpose" class="bg-center bg-cover bg-no-repeat ">
+  <div class="section-title">
+    <span class="fs-5">Que buscamos</span>
+    <h2 > Nuestro Objetivo</h2>
+  </div>
+  <div id="carouselExampleCaptions" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" ></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" ></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active transition-duration-1000"
+      data-interval="2000">
+        <div class="overlay-image" style="background-image: url(assets/lideres.jpg);"></div>
+        <div class="container  text-start lg:ml-8">
+          <h1 class="fs-1 font-italic">Lideres en el sector</h1>
+          <p>Queremos ser la principal plataforma para asegurar tus electrodomésticos</p>
+        </div>
+      </div>
+      <div class="carousel-item transition-duration-1000"
+           data-interval="1000">
+        <div class="overlay-image" style="background-image: url(assets/compromiso.jpg);"></div>
+        <div class="container text-center lg:ml-8">
+          <h1 class="fs-1 font-italic">Compromiso con nuestros clientes</h1>
+          <p>Queremos mantener seguros los electrodomésticos en Lima</p>
+        </div>
+      </div>
+      <div class="carousel-item transition-duration-1000 "
+           data-interval="500">
+        <div class="overlay-image" style="background-image: url(assets/alcance.jpg);"></div>
+        <div class="container text-end lg:ml-8">
+          <h1 class="fs-1 font-italic">Mayor alcance</h1>
+          <p>Queremos darnos a conocer en todos lados del mundo.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</section>
+
+
+
+<section class="services " id="services">
+  <div class="inner-service">
+    <div class="section-title">
+         <span class="fs-5">Que hacemos</span>
+        <h2 > Nuestros Servicios</h2>
+    </div>
+    <div class="grid bm-8 pt-2 justify-content-center align-items-center text-center scalein animation-duration-1000 ">
+      <div class="card xl:col-3 lg:col-4 md:col-6 sm:col-8 sm:mb-5 h-auto ml-6 w-21rem h-20rem shadow-lg" >
+          <div class="card-img-top mb-5 align-content-center mt-6">
+          <img ngSrc="assets/services_img_1.png" width="100" height="100" priority>
+          </div>
+          <div class="card-body">
+            <h2 class="card-title">Consejo</h2>
+            <p class="card-text">Te asesoramos en la gestión de la garantía y seguro de tus electrodomésticos</p>
+          </div>
+      </div>
+      <div class="card xl:col-3 lg:col-4 md:col-6 sm:col-8 sm:mb-5 h-auto ml-6 w-21rem h-20rem shadow-lg" >
+        <div class="card-img-top mb-5 align-content-center mt-6">
+          <img ngSrc="assets/services_img_2.png" width="100" height="100" priority>
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">Mantenimiento</h2>
+          <p class="card-text">Mantenimiento constante y a domicilio para tus electrodomésticos</p>
+        </div>
+      </div>
+      <div class="card xl:col-3 lg:col-4 md:col-6 sm:col-8 sm:mb-5 h-auto ml-6 w-21rem h-20rem shadow-lg" >
+        <div class="card-img-top mb-5 align-content-center mt-6">
+          <img ngSrc="assets/services_img_1.png" width="100" height="100" priority>
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">Seguridad</h2>
+          <p class="card-text">Asegura tus electrodomésticos con uno de nuestros planes</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="flex-container " id="plans">
+  <div class="section-title">
+    <span class="fs-5">Que ofrecemos</span>
+    <h2 > Nuestros Planes</h2>
+  </div>
+    <div class="grid bm-8 pt-2 justify-content-center align-items-center text-center scalein animation-duration-1000 ">
+      <div class="card xl:col-3 lg:col-4 md:col-6 sm:col-8 sm:mb-5 h-auto ml-6 w-21rem h-30rem shadow-lg">
+        <div >
+          <p class="fs-4 ">Basico</p>
+          <p class="fs-2 fw-semibold">$15.00</p>
+          <p class="fs-6 fw-semibold">Un mes</p>
+        </div>
+        <p class="fs-3 text-start ml-4 mb-4 mt-3">Beneficios :</p>
+        <ul class="list-none">
+          <li  >Registra hasta 3 electrodomésticos</li>
+          <li class="mt-2">Contacta con nuestros técnicos al instante</li>
+          <li class="mt-2">Reparación sin costo adicional</li>
+        </ul>
+        <div class="col-auto">
+          <button type="button" class="btn btn-outline-primary mt-6 w-6 " [routerLink]="'/register'">Crear una cuenta</button>
+        </div>
+      </div>
+
+      <div class="card xl:col-3 lg:col-4 md:col-6 sm:col-8 sm:mb-5 h-auto ml-6 w-21rem h-30rem shadow-lg" >
+        <div>
+          <div class="box-">
+            <p class="fs-4 ">Regular</p>
+          </div>
+          <p class="fs-2 fw-semibold">$40.00</p>
+          <p class="fs-6 fw-semibold">Tres meses</p>
+        </div>
+        <p class="fs-3 text-start ml-4 mb-4 mt-3">Beneficios :</p>
+        <ul class="list-none">
+          <li >Todas las funciones básicas</li>
+          <li class="mt-2">Registra hasta 6 electrodomésticos</li>
+          <li class="mt-2">Prioridad en la cola de reparación</li>
+        </ul>
+        <div class="col-auto">
+        <button type="button" class="btn btn-outline-primary mt-6 w-6 " [routerLink]="'/register'">Crear una cuenta</button>
+        </div>
+      </div>
+
+      <div class="card xl:col-3 lg:col-4 md:col-6 sm:col-8 sm:mb-5 h-auto ml-6 w-21rem h-30rem shadow-lg">
+        <div>
+          <p class="fs-4 ">Plus</p>
+          <p class="fs-2 fw-semibold">$70.00</p>
+          <p class="fs-6 fw-semibold">Un año</p>
+        </div>
+        <p class="fs-3 text-start ml-4 mb-4 mt-3">Beneficios :</p>
+        <ul class="list-none">
+          <li >Todas las funciones básicas y regulares</li>
+          <li class="mt-2">Registra hasta 10 electrodomésticos</li>
+          <li class="mt-2">Alta prioridad en la cola de reparación</li>
+        </ul>
+        <div class="col-auto">
+        <button type="button" class="btn btn-outline-primary  mt-6 w-6 "  [routerLink]="'/register'">Crear una cuenta</button>
+        </div>
+      </div>
+    </div>
+</section>
+
+<footer id="contact reveal">
+  <div class="container-body">
+    <div class="column1">
+      <h1>Safe Technology</h1>
+      <p class="mt-5">+51 940596111</p>
+      <p> carlosleonrupay@gmail.com</p>
+    </div>
+    <div class="column2">
+      <p>Follow us:</p>
+      <div class="icons">
+        <div class="icon">
+          <a href="https://www.facebook.com/" target=_blank>
+            <img src="assets/facebook-icon.png"  alt="">
+          </a>
+        </div>
+        <div class="icon">
+          <a href="https://www.instagram.com/"target=_blank>
+            <img src="assets/instagram-icon.png"  alt="">
+          </a>
+        </div>
+        <div class="icon">
+          <a href="https://twitter.com/"target=_blank>
+            <img src="assets/twitter-icon.png"  alt="">
+          </a>
+        </div>
+        <div class="icon">
+          <a href="https://www.linkedin.com/"target=_blank>
+            <img src="assets/linkedin-icon.png" >
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>

@@ -1,0 +1,26 @@
+
+@media screen and (max-width: 576px){
+  .accordion{
+    flex: 0 0 auto;
+    padding: 0.5rem;
+    width: 75%;
+  }
+
+}
+@media screen and (max-width: 440px){
+  .accordion{
+    flex: 0 0 auto;
+    padding: 0.5rem;
+    width: 70%;
+  }
+
+}
+
+@media screen and (max-width: 320px){
+  .accordion{
+    flex: 0 0 auto;
+    padding: 0.5rem;
+    width: 60%;
+  }
+
+}

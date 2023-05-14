@@ -1,0 +1,31 @@
+<app-home-navbar></app-home-navbar>
+<div class="container p-2 line-height-2">
+  <div class="grid bm-8 pt-2 justify-content-center">
+  <div class="card col-12 align-items-center md:col-9 xl:col-4 xl:mr-5 lg:col-5 lg:mr-4 md:mr-3 mt-5">
+
+      <p class="text-3xl text-center">Register Client</p>
+      <img  class="img-fluid" src="https://i.imgur.com/eRknT6R.png" >
+      <p class="text-center">
+        Registrate como un cliente para poder solicitar un servicio de reparacion
+      </p>
+      <button [routerLink]="'/register-client'"
+              type="button" class="btn btn-primary align-items-baseline">
+        Register Client
+      </button>
+  </div>
+
+  <div class="card align-items-center col-12  md:col-9 xl:col-4  lg:col-5 mt-5">
+      <p class="text-3xl text-center">Register Technician</p>
+    <img class="img-fluid" src="https://i.imgur.com/n7SsM24.png" alt="Plan Basico" class="img">
+      <p class="text-center">
+        Registrate como un tecnico para poder ofrecer tus servicios de reparacion
+      </p>
+      <button [routerLink]="'/register-technician'"
+              type="button" class="btn btn-primary">
+        Register Technician
+      </button>
+  </div>
+  </div>
+</div>
+
+

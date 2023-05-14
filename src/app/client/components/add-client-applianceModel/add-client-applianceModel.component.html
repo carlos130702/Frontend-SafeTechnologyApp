@@ -1,0 +1,34 @@
+<h1 mat-dialog-title>Hola</h1>
+<div mat-dialog-content>
+  <p>¿Te gustaría agregar un nuevo electrodomestico?</p>
+</div>
+<form fxLayoutAlign="stretch" fxLayout="column" [formGroup]="applianceModelFormGroup">
+  <div class="form-floating mb-3">
+    <input class="form-control" placeholder="name@example.com" autocomplete="off" formControlName="name" >
+    <label >Nombre</label>
+    <span *ngIf="applianceModelFormGroup.get('name')?.hasError('required')"class="form-text text-danger">
+    Nombre es <strong>requerido</strong>
+    </span>
+  </div>
+
+  <div class="form-floating mb-3">
+    <input class="form-control" placeholder="name@example.com" autocomplete="off" formControlName="urlToImage" >
+    <label >Url de la Imagen</label>
+    <span *ngIf="applianceModelFormGroup.get('urlToImage')?.hasError('required')"class="form-text text-danger">
+    Url es <strong>requerido</strong>
+    </span>
+  </div>
+
+  <div class="form-floating mb-3">
+    <input class="form-control" placeholder="name@example.com" autocomplete="off" formControlName="model" >
+    <label >Modelo</label>
+    <span *ngIf="applianceModelFormGroup.get('model')?.hasError('required')"class="form-text text-danger">
+    Modelo es <strong>requerido</strong>
+    </span>
+  </div>
+</form>
+
+<div class="btn-group ml-8 mb-5">
+  <button class="btn btn-danger" type="button"  (click)="onNoClick()">No Gracias</button>
+  <button class="btn btn-secondary ml-3" [mat-dialog-close]="applianceModelFormGroup" [disabled]="applianceModelFormGroup.invalid">OK</button>
+</div>

@@ -1,0 +1,36 @@
+.flex-container {
+  justify-content: space-around;
+  align-content: center;
+  margin: 0 auto;
+  text-align: center;
+}
+@media screen and (max-width: 576px){
+  .card{
+    flex: 0 0 auto;
+    padding: 0.5rem;
+    width: 80%;
+    margin-bottom: 2rem ;
+  }
+
+}
+
+@media screen and (max-width: 440px){
+  .card{
+    flex: 0 0 auto;
+    padding: 0.5rem;
+    width: 90%;
+    margin-bottom: 2rem ;
+  }
+
+}
+
+@media screen and (max-width: 320px){
+  .card{
+    flex: 0 0 auto;
+    padding: 0.5rem;
+    width: 95%;
+    margin-bottom: 2rem ;
+  }
+
+}
+

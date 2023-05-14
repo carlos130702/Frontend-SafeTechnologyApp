@@ -1,0 +1,36 @@
+<h1 mat-dialog-title>Hola</h1>
+<div mat-dialog-content>
+  <p>¿Te gustaría editar tu electrodomestico?</p>
+</div>
+
+<form fxLayoutAlign="stretch" fxLayout="column" [formGroup]="editApplianceModelFormGroup">
+  <div class="form-floating mb-3">
+    <input class="form-control" placeholder="name@example.com" autocomplete="off" formControlName="name" >
+    <label >Nombre</label>
+    <span *ngIf="editApplianceModelFormGroup.get('name')?.hasError('required')"class="form-text text-danger">
+    Nombre es <strong>requerido</strong>
+    </span>
+  </div>
+
+  <div class="form-floating mb-3">
+    <input class="form-control" placeholder="name@example.com" autocomplete="off" formControlName="urlToImage" >
+    <label >Url de la Imagen</label>
+    <span *ngIf="editApplianceModelFormGroup.get('urlToImage')?.hasError('required')"class="form-text text-danger">
+    Url es <strong>requerido</strong>
+    </span>
+  </div>
+
+  <div class="form-floating mb-3">
+    <input class="form-control" placeholder="name@example.com" autocomplete="off" formControlName="model" >
+    <label >Modelo</label>
+    <span *ngIf="editApplianceModelFormGroup.get('model')?.hasError('required')"class="form-text text-danger">
+    Modelo es <strong>requerido</strong>
+    </span>
+  </div>
+</form>
+
+<div class="btn-group ml-8 mb-5">
+  <button class="btn btn-danger" type="button" mat-raised-button color="warn" (click)="onNoClick()">No Gracias</button>
+  <button *ngIf="editApplianceModelFormGroup" class="btn btn-secondary ml-3" [mat-dialog-close]="editApplianceModelFormGroup"
+          [disabled]="editApplianceModelFormGroup.invalid" >Ok</button>
+</div>

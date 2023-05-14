@@ -1,0 +1,24 @@
+<h1 mat-dialog-title>Hola</h1>
+<div mat-dialog-content>
+  <p>Quieres guardar tus cambios?</p>
+</div>
+
+<form fxLayoutAlign="stretch" fxLayout="column" [formGroup]="editImageProfileFormGroup">
+  <div class="form-floating mb-3">
+    <input class="form-control" type="url" placeholder="name@example.com" autocomplete="off" formControlName="urlToProfile" >
+    <label >Url de foto de Perfil</label>
+    <span *ngIf="editImageProfileFormGroup.get('urlToProfile')?.hasError('required')"class="form-text text-danger">
+          Url es <strong>requerido</strong>
+        </span>
+    <span *ngIf="editImageProfileFormGroup.get('urlToProfile')?.hasError('minlength')"class="form-text text-danger">
+          Url debe tener al menos <strong>6</strong> caracteres
+        </span>
+  </div>
+
+</form>
+
+<div class="btn-group ml-8 mb-5">
+  <button class="btn btn-danger" type="button" (click)="onNoClick()">No Gracias</button>
+  <button *ngIf="editImageProfileFormGroup" class="btn btn-secondary ml-3" type="button" [mat-dialog-close]="editImageProfileFormGroup"
+          [disabled]="editImageProfileFormGroup.invalid" >Ok</button>
+</div>

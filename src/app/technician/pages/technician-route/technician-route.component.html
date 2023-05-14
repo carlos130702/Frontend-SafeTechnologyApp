@@ -1,0 +1,45 @@
+<div class="justify-content-center">
+  <div class="flex flex-column ">
+    <app-technician-navbar></app-technician-navbar>
+    <div class="table2 xl:col-10 lg:col-10 md:col-10 sm:col-9  mt-5 md:mt-4 h-auto">
+
+
+  <h2 class="fs-2 text-center">Citas Registradas</h2>
+      <div class="table-responsive">
+  <table class="table">
+     <thead>
+      <tr>
+       <th scope="col">#</th>
+       <th scope="col">Nombre del cliente</th>
+       <th scope="col">Direccion</th>
+        <th scope="col">Electrodomestico</th>
+       <th scope="col">Fecha de atencion</th>
+       <th scope="col">Hora</th>
+      </tr>
+     </thead>
+     <tbody>
+       <tr *ngFor="let appointment of appointmentData; index as i">
+         <th scope="row">{{ i + 1 }}</th>
+         <td>
+          {{ appointment.client.names | titlecase }}
+         </td>
+         <td>
+          {{ appointment.client.address | titlecase }}
+         </td>
+         <td>
+           {{ appointment.applianceModel.name | titlecase }}
+         </td>
+         <td>
+          {{ appointment.dateAttention }}
+         </td>
+         <td>
+          {{ appointment.hour }}
+         </td>
+       </tr>
+     </tbody>
+  </table>
+      </div>
+</div>
+</div>
+  </div>
+
