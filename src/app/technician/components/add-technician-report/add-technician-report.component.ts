@@ -1,7 +1,7 @@
 import {Component, Inject} from "@angular/core";
 import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
-import {HttpClient} from "@angular/common/http";
+import { HttpClient } from "@angular/common/http";
 import {ReportsService} from "../../services/reports.service";
 import {ApplianceModel} from "../../../client/interfaces/appliancemodel";
 import {Appointment} from "../../../client/interfaces/appointment";
