@@ -3,19 +3,19 @@
   <div class="grid p-3 justify-content-center ">
     <div class="flex flex-column ">
       <div class="card xl:col-10 lg:col-10 md:col-10 sm:col-9  mt-5 md:mt-4 h-auto">
-        <h2 class="text-dark fs-4 text-center">Perfil de {{technicianActual.names| titlecase}}</h2>
+        <h2 class="text-dark fs-4 text-center">Perfil de {{technicianActual.firstName| titlecase}}</h2>
         <button id="profile" type="button" (click)="openDialogImage(technicianActual)">
-          <img class="img-thumbnail img-fluid rounded mx-auto d-block border border-dark w-30rem h-20rem" [src]="technicianActual.urlToProfile"  alt="Profile">
+          <img class="img-thumbnail img-fluid rounded mx-auto d-block border border-dark w-30rem h-20rem" [src]="technicianActual.profileImageUrl"  alt="Profile">
         </button>
         <br>
         <div class="card-body ">
           <h5 class="card-title fs-6 text-start">
             <strong>Nombre:</strong></h5>
-          <p class="card-text text-center">{{technicianActual.names | titlecase}}
+          <p class="card-text text-center">{{technicianActual.firstName | titlecase}}
             <br>
           <h5 class="card-title fs-6 text-start">
             <strong>Apellido:</strong></h5>
-          <p class="card-text text-center">{{technicianActual.lastNames | titlecase}}
+          <p class="card-text text-center">{{technicianActual.lastName | titlecase}}
             <br>
           <h5 class="card-title fs-6 text-start">
             <strong>Direccion:</strong></h5>
@@ -23,7 +23,7 @@
             <br>
           <h5 class="card-title fs-6 text-start ">
             <strong>Celular:</strong></h5>
-          <p class="card-text text-center">{{technicianActual.cellPhoneNumber}}
+          <p class="card-text text-center">{{technicianActual.phoneNumber}}
             <br>
             <button type="button" class="btn btn-outline-danger btn-sm ml-auto" (click)="openDialog(technicianActual)">
               <i class="bi bi-pencil"></i> Editar

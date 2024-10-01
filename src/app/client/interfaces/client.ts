@@ -1,12 +1,12 @@
 export interface Client {
-  id:number;
-  cellPhoneNumber: string;
-  names: string;
-  lastNames: string;
+  id: number;
+  phoneNumber: string;
+  firstName: string;
+  lastName: string;
   address: string;
   email: string;
   password: string;
-  urlToProfile:string;
-  planType:string;
-  username:string;
+  profileImageUrl: string;
+  planType: string;
+  username: string;
 }

@@ -11,10 +11,10 @@ import {Client} from "../../../client/interfaces/client";
 })
 export class EditTechnicianProfileComponent {
   editTechnicianProfileFormGroup= new FormGroup({
-    names: new FormControl('',[Validators.required,Validators.minLength(6),Validators.maxLength(15)]),
-    lastNames: new FormControl('',[Validators.required,Validators.minLength(6),Validators.maxLength(15)]),
+    firstName: new FormControl('',[Validators.required,Validators.minLength(6),Validators.maxLength(15)]),
+    lastName: new FormControl('',[Validators.required,Validators.minLength(6),Validators.maxLength(15)]),
     address: new FormControl('',[Validators.required,Validators.minLength(6)]),
-    cellPhoneNumber: new FormControl('',[Validators.required, Validators.pattern("^(9)([0-9]){8}$")]),
+    phoneNumber: new FormControl('',[Validators.required, Validators.pattern("^(9)([0-9]){8}$")]),
     email: new FormControl('',[Validators.required,
       Validators.email]),
     password: new FormControl('',[Validators.required,
@@ -26,10 +26,10 @@ export class EditTechnicianProfileComponent {
     @Inject(MAT_DIALOG_DATA) public  data: Client,
   ){
     this.editTechnicianProfileFormGroup.setValue({
-      names:data.names,
-      lastNames:data.lastNames,
+      firstName:data.firstName,
+      lastName:data.lastName,
       address:data.address,
-      cellPhoneNumber:data.cellPhoneNumber,
+      phoneNumber:data.phoneNumber,
       email:data.email,
       password:data.password
     })

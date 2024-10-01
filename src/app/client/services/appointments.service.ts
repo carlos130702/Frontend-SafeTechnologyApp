@@ -9,7 +9,7 @@ import {Appointment} from "../interfaces/appointment";
 export class AppointmentsService {
 
   // Endpoint
-  basePath = 'http://localhost:8080/api/v1/appointments';
+  basePath = 'http://localhost:4000/appointments';
 
   httpOptions = {
     headers: new HttpHeaders({

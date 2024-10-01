@@ -7,14 +7,14 @@
   <div class="form-floating mb-3">
     <input class="form-control" placeholder="name@example.com" autocomplete="off" formControlName="names" >
     <label >Nombre</label>
-    <span *ngIf="editTechnicianProfileFormGroup.get('names')?.hasError('required')"class="form-text text-danger">
+    <span *ngIf="editTechnicianProfileFormGroup.get('firstName')?.hasError('required')" class="form-text text-danger">
           Nombre es <strong>requerido</strong>
         </span>
-    <span *ngIf="editTechnicianProfileFormGroup.get('names')?.hasError('minlength')"class="form-text text-danger">
+    <span *ngIf="editTechnicianProfileFormGroup.get('firstName')?.hasError('minlength')" class="form-text text-danger">
           Nombre debe tener al menos <strong>2</strong> caracteres
         </span>
-    <span *ngIf="editTechnicianProfileFormGroup.get('names')?.hasError('maxlength') &&
-                            !editTechnicianProfileFormGroup.get('names')?.hasError('required')"class="form-text text-danger">
+    <span *ngIf="editTechnicianProfileFormGroup.get('firstName')?.hasError('maxlength') &&
+                            !editTechnicianProfileFormGroup.get('firstName')?.hasError('required')" class="form-text text-danger">
           Nombre debe tener menos de <strong>16</strong> caracteres
         </span>
   </div>
@@ -22,14 +22,14 @@
   <div class="form-floating mb-3">
     <input class="form-control" placeholder="name@example.com" autocomplete="off" formControlName="lastNames" >
     <label >Apellido</label>
-    <span *ngIf="editTechnicianProfileFormGroup.get('lastNames')?.hasError('required')"class="form-text text-danger">
+    <span *ngIf="editTechnicianProfileFormGroup.get('lastName')?.hasError('required')" class="form-text text-danger">
           Apellido es <strong>requerido</strong>
         </span>
-    <span *ngIf="editTechnicianProfileFormGroup.get('lastNames')?.hasError('minlength')"class="form-text text-danger">
+    <span *ngIf="editTechnicianProfileFormGroup.get('lastName')?.hasError('minlength')" class="form-text text-danger">
           Apellido debe tener al menos <strong>6</strong> caracteres
         </span>
-    <span *ngIf="editTechnicianProfileFormGroup.get('lastNames')?.hasError('maxlength') &&
-                            !editTechnicianProfileFormGroup.get('lastNames')?.hasError('required')"class="form-text text-danger">
+    <span *ngIf="editTechnicianProfileFormGroup.get('lastName')?.hasError('maxlength') &&
+                            !editTechnicianProfileFormGroup.get('lastName')?.hasError('required')" class="form-text text-danger">
           Apellido debe tener menos de <strong>16</strong> caracteres
         </span>
   </div>
@@ -37,10 +37,10 @@
   <div class="form-floating mb-3">
     <input class="form-control" placeholder="name@example.com" autocomplete="off" formControlName="address" >
     <label >Direccion</label>
-    <span *ngIf="editTechnicianProfileFormGroup.get('address')?.hasError('required')"class="form-text text-danger">
+    <span *ngIf="editTechnicianProfileFormGroup.get('address')?.hasError('required')" class="form-text text-danger">
           Direccion es <strong>requerido</strong>
         </span>
-    <span *ngIf="editTechnicianProfileFormGroup.get('address')?.hasError('minlength')"class="form-text text-danger">
+    <span *ngIf="editTechnicianProfileFormGroup.get('address')?.hasError('minlength')" class="form-text text-danger">
           Direccion debe tener al menos <strong>6</strong> characters
         </span>
   </div>
@@ -48,10 +48,10 @@
   <div class="form-floating mb-3">
     <input class="form-control" type="number" placeholder="name@example.com" autocomplete="off" formControlName="cellPhoneNumber" >
     <label >Celular</label>
-    <span *ngIf="editTechnicianProfileFormGroup.get('cellPhoneNumber')?.hasError('required')"class="form-text text-danger">
+    <span *ngIf="editTechnicianProfileFormGroup.get('phoneNumber')?.hasError('required')" class="form-text text-danger">
           Celular es <strong>requerido</strong>
         </span>
-    <span *ngIf="editTechnicianProfileFormGroup.get('cellPhoneNumber')?.hasError('pattern')"class="form-text text-danger">
+    <span *ngIf="editTechnicianProfileFormGroup.get('phoneNumber')?.hasError('pattern')" class="form-text text-danger">
           Celular debe ser un <strong>numero</strong> valido
         </span>
   </div>
@@ -59,10 +59,10 @@
   <div class="form-floating mb-3">
     <input class="form-control" type="email" placeholder="name@example.com" autocomplete="off" formControlName="email" >
     <label >Email</label>
-    <span *ngIf="editTechnicianProfileFormGroup.get('email')?.hasError('required')"class="form-text text-danger">
+    <span *ngIf="editTechnicianProfileFormGroup.get('email')?.hasError('required')" class="form-text text-danger">
           Email es <strong>requerido</strong>
         </span>
-    <span *ngIf="editTechnicianProfileFormGroup.get('email')?.hasError('email')"class="form-text text-danger">
+    <span *ngIf="editTechnicianProfileFormGroup.get('email')?.hasError('email')" class="form-text text-danger">
           Invalid email
         </span>
   </div>
@@ -70,10 +70,10 @@
   <div class="form-floating mb-3">
     <input class="form-control" type="password" placeholder="name@example.com" autocomplete="off" formControlName="password" >
     <label >Contraseña</label>
-    <span *ngIf="editTechnicianProfileFormGroup.get('password')?.hasError('required')"class="form-text text-danger">
+    <span *ngIf="editTechnicianProfileFormGroup.get('password')?.hasError('required')" class="form-text text-danger">
           Contraseña es <strong>requerido</strong>
         </span>
-    <span *ngIf="editTechnicianProfileFormGroup.get('password')?.hasError('minlength')"class="form-text text-danger">
+    <span *ngIf="editTechnicianProfileFormGroup.get('password')?.hasError('minlength')" class="form-text text-danger">
           Contraseña debe tener al menos <strong>6</strong> caracteres
         </span>
   </div>

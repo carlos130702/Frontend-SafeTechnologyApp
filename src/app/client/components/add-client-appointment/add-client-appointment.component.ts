@@ -41,8 +41,8 @@ export class AddClientAppointmentComponent implements OnInit{
     this.dialogRef.close();
   }
   onClick(): void {
-    this.data.appointment.dateReserve=<string>this.appointmentFormGroup.get("dateReserve")?.value;
-    this.data.appointment.dateAttention=<string>this.appointmentFormGroup.get("dateAttention")?.value;
+    this.data.appointment.dateReserved=<string>this.appointmentFormGroup.get("dateReserve")?.value;
+    this.data.appointment.dateOfAttention=<string>this.appointmentFormGroup.get("dateAttention")?.value;
     this.data.appointment.hour=<string>this.appointmentFormGroup.get("hour")?.value;
     this.data.appointment.technicianId = this.technicianSelected;
   }

@@ -16,7 +16,7 @@
           <h4> <td><strong>Diagnostico:</strong></td> {{report.diagnosis | titlecase}}</h4>
           <h4> <td><strong>Descripcion de Reparacion:</strong></td> {{report.repairDescription | titlecase}}</h4>
           <h4> <td><strong>Fecha:</strong></td> {{report.date}}</h4>
-          <h4> <td><strong>Estado:</strong></td> {{report.appointment.status ? 'Pendiente' : 'Finalizado'}}</h4>
+          <h4> <td><strong>Estado:</strong></td> {{ !(report.appointment) || report.appointment.isActive ? 'Pendiente' : 'Finalizado'}}</h4>
           <button type="button" class="btn btn-outline-secondary" (click)="openDialogUpdate(report)">Edit Item</button></div>
       </div>
     </div>

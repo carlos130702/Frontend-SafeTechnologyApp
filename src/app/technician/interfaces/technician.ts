@@ -1,11 +1,11 @@
 export interface Technician {
-  id:number;
+  id: number;
   username: string;
-  cellPhoneNumber: string;
-  names: string;
-  lastNames: string;
+  phoneNumber: string;
+  firstName: string;
+  lastName: string;
   address: string;
   email: string;
-  urlToProfile:string;
+  profileImageUrl: string;
   password: string;
 }

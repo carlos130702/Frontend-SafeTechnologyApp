@@ -9,7 +9,7 @@ import {ApplianceModel} from "../interfaces/appliancemodel";
 export class AppliancesModelService {
 
   // Endpoint
-  basePath = 'http://localhost:8080/api/v1/applianceModels';
+  basePath = 'http://localhost:4000/applianceModels';
 
   httpOptions = {
     headers: new HttpHeaders({

@@ -11,7 +11,7 @@ import {ApplianceModel} from "../../client/interfaces/appliancemodel";
 export class ReportsService {
 
   // Endpoint
-  basePath = 'http://localhost:8080/api/v1/reports';
+  basePath = 'http://localhost:4000/reports';
 
   httpOptions = {
     headers: new HttpHeaders({

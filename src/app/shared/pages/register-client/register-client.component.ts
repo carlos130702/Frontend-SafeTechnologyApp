@@ -54,11 +54,11 @@ export class RegisterClientComponent implements OnInit,AfterViewInit {
           console.log(response2);
           localStorage.setItem('token',response2.token);
           this.user.username=<string>this.registerClientFormGroup.get("username")?.value;
-          this.user.names=<string>this.registerClientFormGroup.get("names")?.value;
-          this.user.lastNames=<string>this.registerClientFormGroup.get("lastNames")?.value;
+          this.user.firstName=<string>this.registerClientFormGroup.get("names")?.value;
+          this.user.lastName=<string>this.registerClientFormGroup.get("lastNames")?.value;
           this.user.address=<string>this.registerClientFormGroup.get("address")?.value;
-          this.user.urlToProfile=<string>this.registerClientFormGroup.get("urlToProfile")?.value;
-          this.user.cellPhoneNumber=<string>this.registerClientFormGroup.get("cellPhoneNumber")?.value;
+          this.user.profileImageUrl=<string>this.registerClientFormGroup.get("urlToProfile")?.value;
+          this.user.phoneNumber=<string>this.registerClientFormGroup.get("cellPhoneNumber")?.value;
           this.user.email=<string>this.registerClientFormGroup.get("email")?.value;
           this.user.password=<string>this.registerClientFormGroup.get("password")?.value;
           this.user.planType="None";

@@ -1,18 +1,15 @@
+import {Technician} from "./technician";
+import {Appointment} from "../../client/interfaces/appointment";
+
 export interface Report {
   id: number;
   appointmentId: number;
   technicianId: number;
-  technician:{ username: string;
-    cellPhoneNumber: string;
-    names: string;
-    lastNames: string;
-    address: string;
-    email: string;
-    password: string;};
+  technician: Technician;
   observation: string;
-  diagnosis:string;
-  repairDescription:string;
-  date:string;
-  status: boolean;
-  appointment?: any;
+  diagnosis: string;
+  repairDescription: string;
+  date: string;
+  isActive: boolean;
+  appointment?: Appointment;
 }

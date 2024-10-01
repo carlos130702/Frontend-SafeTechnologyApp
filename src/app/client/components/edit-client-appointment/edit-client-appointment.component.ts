@@ -20,7 +20,7 @@ export class EditClientAppointmentComponent {
     @Inject(MAT_DIALOG_DATA) public  data: Appointment,
   ){
     this.editClientAppointmentFormGroup.setValue({
-      dateAttention:data.dateAttention,
+      dateAttention:data.dateOfAttention,
       hour:data.hour,
     })
   }

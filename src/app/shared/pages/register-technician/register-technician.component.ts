@@ -51,11 +51,11 @@ export class RegisterTechnicianComponent implements OnInit{
         console.log(response2);
         localStorage.setItem('token',response2.token);
         this.user2.username=<string>this.registerTechnicianFormGroup.get("username")?.value;
-        this.user2.names=<string>this.registerTechnicianFormGroup.get("names")?.value;
-        this.user2.lastNames=<string>this.registerTechnicianFormGroup.get("lastNames")?.value;
+        this.user2.firstName=<string>this.registerTechnicianFormGroup.get("names")?.value;
+        this.user2.lastName=<string>this.registerTechnicianFormGroup.get("lastNames")?.value;
         this.user2.address=<string>this.registerTechnicianFormGroup.get("address")?.value;
-        this.user2.urlToProfile=<string>this.registerTechnicianFormGroup.get("urlToProfile")?.value;
-        this.user2.cellPhoneNumber=<string>this.registerTechnicianFormGroup.get("cellPhoneNumber")?.value;
+        this.user2.profileImageUrl=<string>this.registerTechnicianFormGroup.get("urlToProfile")?.value;
+        this.user2.phoneNumber=<string>this.registerTechnicianFormGroup.get("cellPhoneNumber")?.value;
         this.user2.email=<string>this.registerTechnicianFormGroup.get("email")?.value;
         this.user2.password=<string>this.registerTechnicianFormGroup.get("password")?.value;
         this.techniciansService.create(this.user2).subscribe((response3: any)=>{

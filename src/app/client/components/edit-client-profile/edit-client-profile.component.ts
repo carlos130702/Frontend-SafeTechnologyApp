@@ -25,10 +25,10 @@ export class EditClientProfileComponent  {
     @Inject(MAT_DIALOG_DATA) public  data: Client,
   ){
     this.editClientProfileFormGroup.setValue({
-      names:data.names,
-      lastNames:data.lastNames,
+      names:data.firstName,
+      lastNames:data.lastName,
       address:data.address,
-      cellPhoneNumber:data.cellPhoneNumber,
+      cellPhoneNumber:data.phoneNumber,
       email:data.email,
       password:data.password
     })

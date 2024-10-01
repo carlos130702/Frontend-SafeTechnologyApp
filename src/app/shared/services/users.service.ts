@@ -10,7 +10,7 @@ import {User} from "../interfaces/user";
 export class UsersService {
 
   // Endpoint
-  basePath = 'http://localhost:8080/api/v1/users';
+  basePath = 'http://localhost:4000/api/v1/users';
 
   httpOptions = {
     headers: new HttpHeaders({

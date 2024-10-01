@@ -17,25 +17,24 @@ export class EditTechnicianReportComponent{
     diagnosis: new FormControl('',[Validators.required]),
     repairDescription: new FormControl('',[Validators.required]),
     date: new FormControl('',[Validators.required]),
-    status: new FormControl(''),
-    appointment: new FormControl("")
+    isActive: new FormControl(''),
   });
 
 
   constructor(
     public dialogRef: MatDialogRef<EditTechnicianReportComponent>,
-    @Inject(MAT_DIALOG_DATA) public  data: Report,
-  ){
+    @Inject(MAT_DIALOG_DATA) public data: Report,
+  ) {
 
     this.editReportFormGroup.setValue({
-      observation:data.observation,
-      diagnosis:data.diagnosis,
-      repairDescription:data.repairDescription,
-      date:data.date,
-      status: data.appointment.status,
-      appointment: data.appointment
-    })
+      observation: data.observation,
+      diagnosis: data.diagnosis,
+      repairDescription: data.repairDescription,
+      date: data.date,
+      isActive: data.isActive ? 'true' : 'false'
+    });
   }
+
 
   onNoClick(): void {
     this.dialogRef.close();

@@ -10,7 +10,7 @@ import {Client} from "../interfaces/client";
 export class ClientsService {
 
   // Endpoint
-  basePath = 'http://localhost:8080/api/v1/clients';
+  basePath = 'http://localhost:4000/clients';
 
   httpOptions = {
     headers: new HttpHeaders({

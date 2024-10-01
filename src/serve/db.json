@@ -1,0 +1,246 @@
+{
+  "clients": [
+    {
+      "id": 1,
+      "firstName": "John",
+      "lastName": "Doe",
+      "email": "john.doe@example.com",
+      "phoneNumber": "1234567890",
+      "address": "123 Main St, Springfield",
+      "password": "password123",
+      "profileImageUrl": "https://randomuser.me/api/portraits/men/1.jpg",
+      "planType": "Premium",
+      "username": "johndoe"
+    },
+    {
+      "id": 2,
+      "firstName": "Jane",
+      "lastName": "Smith",
+      "email": "jane.smith@example.com",
+      "phoneNumber": "0987654321",
+      "address": "456 Elm St, Springfield",
+      "password": "password456",
+      "profileImageUrl": "https://randomuser.me/api/portraits/women/2.jpg",
+      "planType": "Basic",
+      "username": "janesmith"
+    },
+    {
+      "id": 3,
+      "firstName": "Robert",
+      "lastName": "Johnson",
+      "email": "robert.johnson@example.com",
+      "phoneNumber": "5647382910",
+      "address": "789 Oak St, Springfield",
+      "password": "password789",
+      "profileImageUrl": "https://randomuser.me/api/portraits/men/3.jpg",
+      "planType": "Premium",
+      "username": "robertjohnson"
+    },
+    {
+      "id": 4,
+      "firstName": "Alice",
+      "lastName": "Williams",
+      "email": "alice.williams@example.com",
+      "phoneNumber": "9081726354",
+      "address": "321 Maple St, Springfield",
+      "password": "password101",
+      "profileImageUrl": "https://randomuser.me/api/portraits/women/4.jpg",
+      "planType": "Basic",
+      "username": "alicewilliams"
+    }
+  ],
+  "appointments": [
+    {
+      "id": 1,
+      "clientId": 1,
+      "dateReserved": "2024-09-30",
+      "dateOfAttention": "2024-10-01",
+      "hour": "10:00 AM",
+      "applianceModelId": 101,
+      "technicianId": 301,
+      "isActive": true,
+      "applianceModel": {
+        "urlToImage": "https://example.com/images/fridge.jpg",
+        "name": "Samsung Refrigerator",
+        "model": "RF28R7351SR"
+      }
+    },
+    {
+      "id": 2,
+      "clientId": 2,
+      "dateReserved": "2024-10-05",
+      "dateOfAttention": "2024-10-07",
+      "hour": "3:00 PM",
+      "applianceModelId": 102,
+      "technicianId": 302,
+      "isActive": false,
+      "applianceModel": {
+        "urlToImage": "https://example.com/images/washer.jpg",
+        "name": "LG Washing Machine",
+        "model": "WM3488HW"
+      }
+    },
+    {
+      "id": 3,
+      "clientId": 3,
+      "dateReserved": "2024-09-28",
+      "dateOfAttention": "2024-09-29",
+      "hour": "11:30 AM",
+      "applianceModelId": 103,
+      "technicianId": 301,
+      "isActive": true,
+      "applianceModel": {
+        "urlToImage": "https://example.com/images/dryer.jpg",
+        "name": "Whirlpool Dryer",
+        "model": "WED7500GC"
+      }
+    },
+    {
+      "id": 4,
+      "clientId": 4,
+      "dateReserved": "2024-10-01",
+      "dateOfAttention": "2024-10-03",
+      "hour": "2:00 PM",
+      "applianceModelId": 104,
+      "technicianId": 303,
+      "isActive": false,
+      "applianceModel": {
+        "urlToImage": "https://example.com/images/microwave.jpg",
+        "name": "Panasonic Microwave",
+        "model": "NN-SN966S"
+      }
+    }
+  ],
+  "applianceModels": [
+    {
+      "id": 101,
+      "name": "Samsung Refrigerator",
+      "model": "RF28R7351SR",
+      "imageUrl": "https://example.com/images/fridge.jpg",
+      "clientId": 1,
+      "technicianId": 301,
+      "isActive": true
+    },
+    {
+      "id": 102,
+      "name": "LG Washing Machine",
+      "model": "WM3488HW",
+      "imageUrl": "https://example.com/images/washer.jpg",
+      "clientId": 2,
+      "technicianId": 302,
+      "isActive": true
+    },
+    {
+      "id": 103,
+      "name": "Whirlpool Dryer",
+      "model": "WED7500GC",
+      "imageUrl": "https://example.com/images/dryer.jpg",
+      "clientId": 3,
+      "technicianId": 301,
+      "isActive": false
+    },
+    {
+      "id": 104,
+      "name": "Panasonic Microwave",
+      "model": "NN-SN966S",
+      "imageUrl": "https://example.com/images/microwave.jpg",
+      "clientId": 4,
+      "technicianId": 303,
+      "isActive": true
+    }
+  ],
+  "technicians": [
+    {
+      "id": 301,
+      "username": "mikebrown",
+      "phoneNumber": "6543219870",
+      "firstName": "Mike",
+      "lastName": "Brown",
+      "address": "100 Lincoln St, Springfield",
+      "email": "mike.brown@example.com",
+      "profileImageUrl": "https://randomuser.me/api/portraits/men/5.jpg",
+      "password": "tech12345"
+    },
+    {
+      "id": 302,
+      "username": "chrisgreen",
+      "phoneNumber": "7483920174",
+      "firstName": "Chris",
+      "lastName": "Green",
+      "address": "200 Cedar St, Springfield",
+      "email": "chris.green@example.com",
+      "profileImageUrl": "https://randomuser.me/api/portraits/men/6.jpg",
+      "password": "tech54321"
+    },
+    {
+      "id": 303,
+      "username": "emilywhite",
+      "phoneNumber": "8734650192",
+      "firstName": "Emily",
+      "lastName": "White",
+      "address": "300 Pine St, Springfield",
+      "email": "emily.white@example.com",
+      "profileImageUrl": "https://randomuser.me/api/portraits/women/7.jpg",
+      "password": "tech98765"
+    }
+  ],
+  "reports": [
+    {
+      "id": 1,
+      "appointmentId": 1,
+      "technicianId": 301,
+      "technician": {
+        "username": "mikebrown",
+        "phoneNumber": "6543219870",
+        "firstName": "Mike",
+        "lastName": "Brown",
+        "address": "100 Lincoln St, Springfield",
+        "email": "mike.brown@example.com",
+        "password": "tech12345"
+      },
+      "observation": "Refrigerator not cooling properly.",
+      "diagnosis": "Faulty compressor.",
+      "repairDescription": "Replaced the compressor and tested the cooling system.",
+      "date": "2024-10-01",
+      "isActive": true
+    },
+    {
+      "id": 2,
+      "appointmentId": 2,
+      "technicianId": 302,
+      "technician": {
+        "username": "chrisgreen",
+        "phoneNumber": "7483920174",
+        "firstName": "Chris",
+        "lastName": "Green",
+        "address": "200 Cedar St, Springfield",
+        "email": "chris.green@example.com",
+        "password": "tech54321"
+      },
+      "observation": "Washer leaking water.",
+      "diagnosis": "Broken water inlet valve.",
+      "repairDescription": "Replaced the valve and ensured no further leaks.",
+      "date": "2024-10-07",
+      "isActive": false
+    },
+    {
+      "id": 3,
+      "appointmentId": 3,
+      "technicianId": 301,
+      "technician": {
+        "username": "mikebrown",
+        "phoneNumber": "6543219870",
+        "firstName": "Mike",
+        "lastName": "Brown",
+        "address": "100 Lincoln St, Springfield",
+        "email": "mike.brown@example.com",
+        "password": "tech12345"
+      },
+      "observation": "Dryer not producing heat.",
+      "diagnosis": "Thermostat malfunction.",
+      "repairDescription": "Replaced thermostat and tested the unit.",
+      "date": "2024-09-29",
+      "isActive": true
+    }
+  ]
+}

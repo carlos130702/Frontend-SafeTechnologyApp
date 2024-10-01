@@ -24,7 +24,7 @@ export class EditClientApplianceModelComponent {
     this.editApplianceModelFormGroup.setValue({
       name:data.name,
       model:data.model,
-      urlToImage:data.urlToImage
+      urlToImage:data.imageUrl
     })
   }
 

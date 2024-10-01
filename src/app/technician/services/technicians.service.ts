@@ -9,7 +9,7 @@ import {Technician} from "../interfaces/technician";
 export class TechniciansService {
 
   // Endpoint
-  basePath = 'http://localhost:8080/api/v1/technicians';
+  basePath = 'http://localhost:4000/technicians';
 
   httpOptions = {
     headers: new HttpHeaders({

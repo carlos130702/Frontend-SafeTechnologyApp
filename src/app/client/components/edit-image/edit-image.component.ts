@@ -18,7 +18,7 @@ export class EditImageComponent {
     @Inject(MAT_DIALOG_DATA) public  data: Client,
   ){
     this.editImageProfileFormGroup.setValue({
-      urlToProfile:data.urlToProfile,
+      urlToProfile:data.profileImageUrl,
     })
   }
 

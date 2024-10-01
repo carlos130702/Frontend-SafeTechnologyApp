@@ -40,10 +40,10 @@ export class ClientProfileComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result=>{
       if (confirm('¿Está seguro de que desea actualizar su perfil?')) {
       if(result!=undefined){
-        data.names=result.get("names")?.value;
-        data.lastNames=result.get("lastNames")?.value;
+        data.firstName=result.get("names")?.value;
+        data.lastName=result.get("lastNames")?.value;
         data.address=result.get("address")?.value;
-        data.cellPhoneNumber=result.get("cellPhoneNumber")?.value;
+        data.phoneNumber=result.get("cellPhoneNumber")?.value;
         data.email=result.get("email")?.value;
         data.password=result.get("password")?.value;
         this.clientsService.update(data.id,data).subscribe(response=>{
@@ -61,7 +61,7 @@ export class ClientProfileComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result=>{
       if (confirm('¿Está seguro de que desea actualizar esta imagen?')) {
         if (result != undefined) {
-          data.urlToProfile = result.get("urlToProfile")?.value;
+          data.profileImageUrl = result.get("urlToProfile")?.value;
           this.clientsService.update(data.id, data).subscribe(response => {
             this.getActualData();
           })
